@@ -1,18 +1,15 @@
 import "./App.css";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Typography from "@material-ui/core/Typography";
-import Container from "@material-ui/core/Container";
+import Navbar from "./Sections/Header/Navbar";
+import useSticky from "./Hooks/useSticky";
+import Welcome from "./Sections/Header/Welcome";
+
 function App() {
+  const { isSticky, element } = useSticky();
   return (
-    <>
-      <CssBaseline />
-      <Container fixed>
-        <Typography
-          component="div"
-          style={{ backgroundColor: "#cfe8fc", height: "100vh" }}
-        />
-      </Container>
-    </>
+    <div className="App">
+      <Navbar sticky={isSticky} />
+      <Welcome element={element} />
+    </div>
   );
 }
 
