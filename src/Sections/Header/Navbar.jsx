@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import ToggleTheme from "../../Components/Buttons/ToggleTheme";
 import "./style.css";
@@ -14,6 +14,7 @@ import { IconContext } from "react-icons";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import BurgerMenu from "../../images/BurgerMenu.svg";
+
 const GlobalStyles = createGlobalStyle`
   *,
   *::after,
@@ -40,33 +41,31 @@ export function Sidebar() {
   const showSidebar = () => setSidebar(!sidebar);
 
   return (
-    <>
-      <IconContext.Provider value={{ color: "#fff", width: "33px" }}>
-        <div className="sidebar">
-          <Link to="#" className="menu-bars">
-            <img src={BurgerMenu} alt="BurgerMenu" onClick={showSidebar} />
+    <IconContext.Provider value={{ color: "#fff", width: "33px" }}>
+      <div className="sidebar">
+        <Link to="#" className="menu-bars">
+          <img src={BurgerMenu} alt="BurgerMenu" onClick={showSidebar} />
+        </Link>
+      </div>
+      <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+        <ul className="nav-menu-items" onClick={showSidebar}>
+          <Link to="#">
+            <AiIcons.AiOutlineClose />
           </Link>
-        </div>
-        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
-          <ul className="nav-menu-items" onClick={showSidebar}>
-            <Link to="#">
-              <AiIcons.AiOutlineClose />
-            </Link>
 
-            {SidebarData.map((item, index) => {
-              return (
-                <li key={index} className={item.cName}>
-                  <Link to={item.path}>
-                    <i class="fas fa-check"></i>
-                    <span>{item.title}</span>
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
-      </IconContext.Provider>
-    </>
+          {SidebarData.map((item, index) => {
+            return (
+              <li key={index} className={item.cName}>
+                <Link to={item.path}>
+                  <i class="fas fa-check"></i>
+                  <span>{item.title}</span>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
+    </IconContext.Provider>
   );
 }
 //function Navbar

@@ -1,6 +1,9 @@
 import styled from "styled-components";
+
+//icons, images
 import moon from "../../images/Moon.PNG";
 import sun from "../../images/sun.png";
+
 const Toggle = styled.button`
   cursor: pointer;
   height: 50px;
@@ -10,17 +13,12 @@ const Toggle = styled.button`
   &:focus {
     outline: none;
   }
-
   transition: all 0.5s ease;
 `;
 
 function ToggleTheme(props) {
   function changeTheme() {
-    if (props.theme === "light") {
-      props.setTheme("dark");
-    } else {
-      props.setTheme("light");
-    }
+    props.theme === "light" ? props.setTheme("dark") : props.setTheme("light");
   }
   const icon =
     props.theme === "light" ? (
