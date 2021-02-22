@@ -37,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
 
 export function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
+  const [showicon, setShow] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -57,8 +58,10 @@ export function Sidebar() {
             return (
               <li key={index} className={item.cName}>
                 <Link to={item.path}>
-                  <i class="fas fa-check"></i>
-                  <span>{item.title}</span>
+                  <span onClick={() => setShow(!showicon)}>
+                    {showicon ? <i className="fas fa-check"></i> : null}
+                    {item.title}
+                  </span>
                 </Link>
               </li>
             );
