@@ -20,6 +20,8 @@ const GlobalStyles = createGlobalStyle`
   *::after,
   *::before {
     box-sizing: border-box;
+    padding:0;
+    margin:0;
   }
 
   body {
@@ -27,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     height: 1000vh;
+    width:100%;
     margin: 0;
     padding: 0;
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;

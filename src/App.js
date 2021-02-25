@@ -3,6 +3,7 @@ import Navbar from "./Sections/Header/Navbar";
 import useSticky from "./Hooks/useSticky";
 import Welcome from "./Sections/Header/Welcome";
 import Portfolio from "./Sections/Portfolio/index";
+import Testimonial from "./Sections/Testimonial/index";
 
 function App() {
   const { isSticky, element } = useSticky();
@@ -11,6 +12,7 @@ function App() {
       <Navbar sticky={isSticky} />
       <Welcome element={element} />
       <Portfolio />
+      <Testimonial />
     </div>
   );
 }
