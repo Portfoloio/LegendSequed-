@@ -3,7 +3,7 @@ import "./style.css";
 const Welcome = ({ element }) => {
   return (
     <main>
-      <section className="welcome">
+      <section id="welcome">
         <div ref={element}></div>
         <div>Welcome into my first page</div>
       </section>

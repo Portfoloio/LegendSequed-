@@ -4,6 +4,5 @@ export const images = [
   { id: "3", imagName: "hello.jpg", tag: "App" },
   { id: "4", imagName: "machine.jpg", tag: "Writing" },
   { id: "5", imagName: "writing.jpg", tag: "Writing" },
-
   { id: "6", imagName: "lemon.jpg", tag: "App" },
 ];

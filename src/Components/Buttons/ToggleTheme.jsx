@@ -1,19 +1,18 @@
 import styled from "styled-components";
 
-//icons, images
-import moon from "../../images/Moon.PNG";
-import sun from "../../images/sun.png";
-
 const Toggle = styled.button`
   cursor: pointer;
-  height: 50px;
-  width: 50px;
+  padding: 10px;
   border-radius: 50%;
   background: ${({ theme }) => theme.gradient};
   &:focus {
     outline: none;
   }
   transition: all 0.5s ease;
+  box-shadow: ${(props) =>
+    props.theme.text === "#363537" || "0 3px 30px 0 rgb(30 93 233 / 56%);"};
+  border: none;
+  background-color: ${({ theme }) => theme.backgroundColor};
 `;
 
 function ToggleTheme(props) {
@@ -22,9 +21,9 @@ function ToggleTheme(props) {
   }
   const icon =
     props.theme === "light" ? (
-      <img src={moon} size={40} alt="moon" />
+      <i className="fas fa-moon"></i>
     ) : (
-      <img src={sun} alt=" sun" />
+      <i className="fas fa-sun"></i>
     );
 
   return <Toggle onClick={changeTheme}>{icon}</Toggle>;
