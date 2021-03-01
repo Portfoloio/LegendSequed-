@@ -2,12 +2,10 @@ import React from "react";
 import "./style.css";
 const Welcome = ({ element }) => {
   return (
-    <main>
-      <section id="welcome">
-        <div ref={element}></div>
-        <div>Welcome into my first page</div>
-      </section>
-    </main>
+    <section id="welcome">
+      <div ref={element}></div>
+      <div>Welcome into my first page</div>
+    </section>
   );
 };
 
