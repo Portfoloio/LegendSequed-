@@ -17,7 +17,13 @@ const Toggle = styled.button`
 
 function ToggleTheme(props) {
   function changeTheme() {
-    props.theme === "light" ? props.setTheme("dark") : props.setTheme("light");
+    if (props.theme === "light") {
+      props.setTheme("dark");
+      localStorage.theme = "dark";
+    } else {
+      props.setTheme("light");
+      localStorage.theme = "light";
+    }
   }
   const icon =
     props.theme === "light" ? (

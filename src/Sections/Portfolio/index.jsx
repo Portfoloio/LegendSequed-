@@ -1,18 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { images } from "./DataImags";
 import { SRLWrapper } from "simple-react-lightbox";
-import { Tags, Tag, Container, ImagCard } from "./style";
-import { darkTheme, lightTheme } from "../Header/Navbar";
+import * as P from "./style";
 import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "../../App";
 
-const Tagbtn = ({ name, handleTag }) => {
-  return <Tag onClick={() => handleTag(name)}>{name.toUpperCase()}</Tag>;
+const TagBtn = ({ name, handleTag, tag }) => {
+  return (
+    <P.Tag
+      onClick={() => handleTag(name)}
+      className={tag === name ? "active" : ""}
+    >
+      {name.toUpperCase()}
+    </P.Tag>
+  );
 };
 
-function Portfolio() {
+function Portfolio(props) {
   const [tag, setTag] = useState("all");
   const [theme, setTheme] = useState("light");
   const [filterImages, setFilterImages] = useState([]);
+
   useEffect(() => {
     tag === "all"
       ? setFilterImages(images)
@@ -20,37 +28,40 @@ function Portfolio() {
   }, [tag]);
 
   return (
-    <div className="container">
-      <h1> Portfolio </h1>
-      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
-        <Tags>
-          <Tagbtn name="all" handleTag={setTag} />
-          <Tagbtn name="App" handleTag={setTag} />
-          <Tagbtn name="Design" handleTag={setTag} />
-          <Tagbtn name="Writing" handleTag={setTag} />
-        </Tags>
-      </ThemeProvider>
-      <SRLWrapper>
-        <Container>
-          {filterImages.map((image) => (
-            <ImagCard key={image.id}>
-              <a href={`/imgs/${image.imagName}`}>
+    <ThemeProvider theme={props.theme === "light" ? darkTheme : lightTheme}>
+      <P.Section>
+        <div id="portfolio--title-tags">
+          <div>
+            <h1> Portfolio </h1>
+            <P.Tags>
+              <TagBtn name="all" handleTag={setTag} tag={tag} />
+              <TagBtn name="App" handleTag={setTag} tag={tag} />
+              <TagBtn name="Design" handleTag={setTag} tag={tag} />
+              <TagBtn name="Writing" handleTag={setTag} tag={tag} />
+            </P.Tags>
+            <p className="text-left">
+              It doesn’t matter how great your product
+              <br /> or service is if your copy does not captivate <br />
+              your audience
+            </p>
+          </div>
+        </div>
+        <div className="portfolio-container">
+          <SRLWrapper>
+            <P.Container>
+              {filterImages.map((image) => (
                 <img
+                  key={image.id}
                   src={`/imgs/${image.imagName}`}
-                  alt="Eman"
-                  style={{
-                    width: "100%",
-                    objectFit: " contain",
-                    borderRadius: "20px",
-                    margin: "30px",
-                  }}
+                  alt={image.imagName}
                 />
-              </a>
-            </ImagCard>
-          ))}
-        </Container>
-      </SRLWrapper>
-    </div>
+              ))}
+            </P.Container>
+          </SRLWrapper>
+        </div>
+        <P.Background></P.Background>
+      </P.Section>
+    </ThemeProvider>
   );
 }
 export default Portfolio;
