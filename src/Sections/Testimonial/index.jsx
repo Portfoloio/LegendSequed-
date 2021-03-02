@@ -2,11 +2,13 @@ import peopleData from "./DataSlider";
 import React, { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteLeft } from "react-icons/fa";
+
 import "./style.css";
 
 function Testimonial() {
   const [people] = useState(peopleData);
   const [index, setIndex] = useState(0);
+
   useEffect(() => {
     const lastIndex = people.length - 1;
     if (index < 0) {

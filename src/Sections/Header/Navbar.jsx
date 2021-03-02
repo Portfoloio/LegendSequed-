@@ -27,6 +27,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
+    /* background-color: ${({ theme }) => theme.Eman} */
   }
   i,li,h1 {
     color: ${({ theme }) => theme.text};
@@ -88,23 +89,26 @@ export function Sidebar() {
 }
 //function Navbar
 // themes of page
-const darkTheme = {
+export const darkTheme = {
   body: "#E2E2E2",
   text: "#363537",
   toggleBorder: "#FFF",
   gradient: "linear-gradient(#241d1d, #232323)",
   backgroundColor: "#212529",
+  Eman: "#568989",
 };
 
-const lightTheme = {
+export const lightTheme = {
   body: "#363537",
   text: "#FAFAFA",
   toggleBorder: "#6B8096",
   gradient: "linear-gradient(#0DD7F7, #79D7ED)",
   backgroundColor: "#0dd7f7",
+  Eman: "#153945",
 };
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.setItem("theme", lightTheme));
+
   const [scroll, setScroll] = useState(false);
 
   const scrollChangeNav = () => {

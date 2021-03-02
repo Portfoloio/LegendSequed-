@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Tags = styled.div`
+  background-color: ${({ theme }) => theme.Eman};
   padding: 20px 0px;
 `;
 export const Tag = styled.button`

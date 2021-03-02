@@ -89,7 +89,7 @@
 
 .nav-menu.active {
   right: 0;
-  transition: 350ms;
+  /* transition: 350ms; */
 }
 
 .nav-text {

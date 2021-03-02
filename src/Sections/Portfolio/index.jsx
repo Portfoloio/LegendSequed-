@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { images } from "./DataImags";
 import { SRLWrapper } from "simple-react-lightbox";
 import { Tags, Tag, Container, ImagCard } from "./style";
+import { darkTheme, lightTheme } from "../Header/Navbar";
+import { ThemeProvider } from "styled-components";
 
 const Tagbtn = ({ name, handleTag }) => {
   return <Tag onClick={() => handleTag(name)}>{name.toUpperCase()}</Tag>;
@@ -9,6 +11,7 @@ const Tagbtn = ({ name, handleTag }) => {
 
 function Portfolio() {
   const [tag, setTag] = useState("all");
+  const [theme, setTheme] = useState("light");
   const [filterImages, setFilterImages] = useState([]);
   useEffect(() => {
     tag === "all"
@@ -19,12 +22,14 @@ function Portfolio() {
   return (
     <div className="container">
       <h1> Portfolio </h1>
-      <Tags>
-        <Tagbtn name="all" handleTag={setTag} />
-        <Tagbtn name="App" handleTag={setTag} />
-        <Tagbtn name="Design" handleTag={setTag} />
-        <Tagbtn name="Writing" handleTag={setTag} />
-      </Tags>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <Tags>
+          <Tagbtn name="all" handleTag={setTag} />
+          <Tagbtn name="App" handleTag={setTag} />
+          <Tagbtn name="Design" handleTag={setTag} />
+          <Tagbtn name="Writing" handleTag={setTag} />
+        </Tags>
+      </ThemeProvider>
       <SRLWrapper>
         <Container>
           {filterImages.map((image) => (
