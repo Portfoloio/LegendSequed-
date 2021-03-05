@@ -8,7 +8,6 @@ import { NavLink } from "react-router-dom";
 import { SidebarData } from "./SidbarData";
 import { IconContext } from "react-icons";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { createGlobalStyle } from "styled-components";
 import { darkTheme, lightTheme } from "../../App";
 
 //function Sidebar
