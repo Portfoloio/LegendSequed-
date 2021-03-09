@@ -6,7 +6,7 @@ export const Background = styled.div`
   opacity: 0.2;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 900px;
 `;
 
 export const Section = styled.section`
