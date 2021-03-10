@@ -1,9 +1,53 @@
 import React, { useState, useEffect } from "react";
-import { images } from "./DataImags";
 import { SRLWrapper } from "simple-react-lightbox";
 import * as P from "./style";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "../../App";
+
+const images = [
+  {
+    id: "1",
+    imagName: "street.jpeg",
+    tag: "App",
+    hoverTitle: "App 1",
+    hoverDescription: "this is app",
+  },
+  {
+    id: "2",
+    imagName: "writing.jpg",
+    tag: "Writing",
+    hoverTitle: "App 2",
+    hoverDescription: "this is app",
+  },
+  {
+    id: "3",
+    imagName: "hello.jpg",
+    tag: "App",
+    hoverTitle: "App 3",
+    hoverDescription: "this is app",
+  },
+  {
+    id: "4",
+    imagName: "water.jpg",
+    tag: "Design",
+    hoverTitle: "App 4",
+    hoverDescription: "this is app",
+  },
+  {
+    id: "5",
+    imagName: "machine.jpg",
+    tag: "Writing",
+    hoverTitle: "App 5",
+    hoverDescription: "this is app",
+  },
+  {
+    id: "6",
+    imagName: "lemon.jpg",
+    tag: "App",
+    hoverTitle: "App 6",
+    hoverDescription: "this is app",
+  },
+];
 
 const TagBtn = ({ name, handleTag, tag }) => {
   return (
@@ -32,7 +76,7 @@ function Portfolio(props) {
       <P.Section>
         <div id="portfolio--title-tags">
           <div>
-            <h1> Portfolio </h1>
+            <h1>Portfolio</h1>
             <P.Tags>
               <TagBtn name="all" handleTag={setTag} tag={tag} />
               <TagBtn name="App" handleTag={setTag} tag={tag} />
@@ -50,11 +94,18 @@ function Portfolio(props) {
           <SRLWrapper>
             <P.Container>
               {filterImages.map((image) => (
-                <img
-                  key={image.id}
-                  src={`/imgs/${image.imagName}`}
-                  alt={image.imagName}
-                />
+                <div id="image-cont">
+                  <div id="hover-image">
+                    <h4>{image.hoverTitle}</h4>
+                    <h5>{image.hoverDescription}</h5>
+                    <i className="far fa-eye"></i>
+                  </div>
+                  <img
+                    key={image.id}
+                    src={`/imgs/${image.imagName}`}
+                    alt={image.imagName}
+                  />
+                </div>
               ))}
             </P.Container>
           </SRLWrapper>
