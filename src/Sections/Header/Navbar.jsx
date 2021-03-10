@@ -14,7 +14,6 @@ import { darkTheme, lightTheme } from "../../App";
 
 export function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
-  const [showicon, setShow] = useState("");
   const [active, setActive] = useState({
     menu: false,
     nav: false,
@@ -53,7 +52,7 @@ export function Sidebar() {
                   }}
                 >
                   <span>
-                    {showicon === "123" && <i className="fas fa-check"></i>}
+                    {/* {showicon === "123" && <i className="fas fa-check"></i>} */}
                     {item.title === "Home" ? item.title : item.title}
                   </span>
                 </NavLink>
