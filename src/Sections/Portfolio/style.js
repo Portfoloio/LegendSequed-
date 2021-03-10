@@ -15,7 +15,7 @@ export const Section = styled.section`
   display: flex;
   justify-content: center;
 
-  #portfolio--title-tags {
+  #Portfolio {
     width: 400px;
     margin: 10px;
     z-index: 1;

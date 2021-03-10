@@ -134,15 +134,6 @@ li {
   height: 1px;
   background-color: #fff;
 }
-
-#welcome {
-  line-height: 1.8;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 .fa-moon,
 .fa-sun {
   color: white;
@@ -156,4 +147,160 @@ li {
   display: block;
   text-align: right;
   font-size: 30px;
+}
+ /*  Style Welcoming section */
+ #Home {
+  line-height: 1.8;
+  height: 90vh;
+  background-image: url("../../images/Group.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+   display: flex;
+  flex-direction: column; 
+  /* margin-top: 300px; */
+
+  padding:150px;
+ 
+}
+.btns
+{
+margin-top: -270px;
+}
+.fill-btn
+{
+  font-weight: 700;
+  font-size: 14px;
+  margin: 36px 0 0 0;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #fff;
+  border: 2px solid #0c3d71;
+  box-shadow: 0 0 30px 0 rgb(0 0 0 / 20%);
+  background-color: #0c3d71;
+  font-family: "Manrope", sans-serif;
+  outline: none;
+
+}
+.primary-btn
+{
+  padding: 10px 30px; 
+  margin: 360px 0px 24px 12px;
+  color: #0c3d71;
+  border: 2px solid #0c3d71;
+  outline: none;
+  border-radius: 50px;
+  font-family: "Manrope", sans-serif;
+  box-shadow: 0 0 30px 0 rgb(0 0 0 / 20%);
+
+
+}
+.fill-btn:hover
+{
+  background-color:#0dd7f7; 
+  cursor: pointer;
+  border:none; 
+}
+.primary-btn:hover 
+{
+  background-color:#0dd7f7; 
+  cursor: pointer;
+  border:none; 
+}
+
+.Hero--info
+{
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 200px; */
+
+}
+.Hero--info p 
+{
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  display:block; 
+  margin: 0px 0px 16px ;
+  color:#666666; 
+  font-family: "Manrope", sans-serif;
+  width:55%; 
+
+ 
+}
+.name-h2
+{
+  font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -1.5px;
+    text-align: left;
+    font-family: "Manrope", sans-serif;
+    color:#394153; 
+    font-size: 56px;
+}
+.Expert-h2
+{ 
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: -1.5px;
+  line-height: 1.5;
+  color:#394153; 
+  margin: 0px 0px 16px ;
+   
+}
+.name-h2 span 
+{
+  color: #0c3d71;
+  font-weight: 900;
+  font-size: 56px;
+}
+.h3-fullStack
+{
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 15px;
+  color:#394153; 
+}
+.h3-fullStack::after
+{
+  content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #0dd7f7;
+    border-radius: 6px;
+    display: block;
+}
+.Lottie-player
+{
+width:40%;
+position: relative;
+margin-top: -430px;
+margin-bottom: 20px;
+left: 60%;
+}
+.icons-logo 
+{
+  /* display: flex;
+  flex-direction: column; */
+  text-align: center; 
+margin-top:250px;
+padding: 50px;
+
+}
+.images
+{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 50px;
+  
+
 }

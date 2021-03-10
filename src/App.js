@@ -6,6 +6,7 @@ import Navbar from "./Sections/Header/Navbar";
 import Welcome from "./Sections/Header/Welcome";
 import Portfolio from "./Sections/Portfolio/index";
 import Testimonial from "./Sections/Testimonial/index";
+import Services from "./Sections/WhatWeDo/index";
 
 // themes of page
 export const lightTheme = {
@@ -60,6 +61,7 @@ function App() {
         <GlobalStyles />
         <Navbar theme={theme} setTheme={setTheme} />
         <Welcome />
+        <Services />
         <Portfolio theme={theme} />
         <Experience />
         <Testimonial />
