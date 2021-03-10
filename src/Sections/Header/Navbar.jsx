@@ -1,19 +1,25 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import ToggleTheme from "../../Components/Buttons/ToggleTheme";
+import { Link } from "react-scroll";
 import "./style.css";
 //sidbar
 
-import { NavLink } from "react-router-dom";
-import { SidebarData } from "./SidbarData";
+import { SidebarData } from "./Data";
 import { IconContext } from "react-icons";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { BrowserRouter as Router } from "react-router-dom";
+
+
 import { darkTheme, lightTheme } from "../../App";
 
 //function Sidebar
 
 export function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
+
+  const [showicon] = useState(true);
+
   const [active, setActive] = useState({
     menu: false,
     nav: false,
@@ -21,7 +27,7 @@ export function Sidebar() {
 
   return (
     <IconContext.Provider value={{ color: "#fff", width: "33px" }}>
-      <NavLink to="#" className="menu-bars">
+      <Link to="#" className="menu-bars">
         {active.menu ? (
           <i
             className="fas fa-times"
@@ -39,23 +45,37 @@ export function Sidebar() {
             }}
           ></i>
         )}
-      </NavLink>
+      </Link>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
-          {SidebarData.map((item, index) => {
+          {SidebarData.map((item, index, activestyle) => {
             return (
               <li key={index} className={item.cName}>
-                <NavLink
-                  to={item.path}
-                  activeStyle={{
-                    color: item.title !== "Home" ? "#0dd7f7" : "",
+                <Link
+                  to={item.title}
+                  activestyle={{
+                    color: item.title === "Home" ? "#0dd7f7" : "",
                   }}
+                  spy={true}
+                  smooth={true}
+                  offset={20}
                 >
                   <span>
-                    {/* {showicon === "123" && <i className="fas fa-check"></i>} */}
+
+                    {showicon === item.title ? (
+                      <i className="fas fa-check"></i>
+                    ) : (
+                      " "
+                    )}
+                    {item.title !== activestyle
+                      ? item.title
+                      : item.title || <i className="fas fa-check"></i>}
+
+                
                     {item.title === "Home" ? item.title : item.title}
+
                   </span>
-                </NavLink>
+                </Link>
               </li>
             );
           })}
@@ -86,7 +106,7 @@ const Navbar = (props) => {
             </li>
             <li className="navbar--link-item">
               <i className="fas fa-envelope-open"></i>
-              sayhai@domain.com
+              Eman@domain.com
             </li>
           </ul>
         </div>
@@ -95,16 +115,6 @@ const Navbar = (props) => {
             <ToggleTheme theme={props.theme} setTheme={props.setTheme} />
             <Sidebar />
           </div>
-          <Switch>
-            <Route path="/Home" exact />
-            <Route path="/Services" />
-            <Route path="/Portfolio" />
-            <Route path="/Experience" />
-            <Route path="/Skills" />
-            <Route path="/Testimonials" />
-            <Route path="/News" />
-            <Route path="/Contact" />
-          </Switch>
         </Router>
       </nav>
     </ThemeProvider>
