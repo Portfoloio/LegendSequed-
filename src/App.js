@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import "./App.css";
+import Experience from "./Sections/Experience";
 import Navbar from "./Sections/Header/Navbar";
 import Welcome from "./Sections/Header/Welcome";
 import Portfolio from "./Sections/Portfolio/index";
@@ -62,6 +63,7 @@ function App() {
         <Welcome />
         <Services />
         <Portfolio theme={theme} />
+        <Experience />
         <Testimonial />
       </ThemeProvider>
     </main>
