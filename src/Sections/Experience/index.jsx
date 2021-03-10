@@ -4,7 +4,7 @@ import * as E from "./style";
 function ExperienceRow({ time, title, description }) {
   return (
     <E.ExperienceRow>
-      <div>
+      <div id="Experience">
         <i className="fas fa-code"></i>
         <div className="title-time">
           <h6>{time}</h6>
