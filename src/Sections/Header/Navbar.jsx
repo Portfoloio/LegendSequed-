@@ -60,7 +60,11 @@ export function Sidebar() {
                   offset={20}
                 >
                   <span>
+
                     {/* {showicon === item.title ? (
+
+                    {showicon === item.title ? (
+
                       <i className="fas fa-check"></i>
                     ) : (
                       " "
@@ -69,7 +73,11 @@ export function Sidebar() {
                       ? item.title
                       : item.title || <i className="fas fa-check"></i>}
 
+
                     {/* {item.title === "Home" ? item.title : item.title} */}
+
+
+
                   </span>
                 </Link>
               </li>
