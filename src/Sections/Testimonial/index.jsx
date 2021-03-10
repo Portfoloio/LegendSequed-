@@ -2,11 +2,13 @@ import peopleData from "./DataSlider";
 import React, { useState, useEffect } from "react";
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteLeft } from "react-icons/fa";
+
 import "./style.css";
 
 function Testimonial() {
   const [people] = useState(peopleData);
   const [index, setIndex] = useState(0);
+
   useEffect(() => {
     const lastIndex = people.length - 1;
     if (index < 0) {
@@ -26,9 +28,13 @@ function Testimonial() {
   }, [index]);
 
   return (
-    <section>
-      <h3> Testimonial </h3>
-      <h1> In their own worlds </h1>
+    <section id="Testimonials">
+      <h3 id="h3-test" className="h-test">
+        Testimonial
+      </h3>
+      <h1 id="h1-test" className="h-test">
+        In their own worlds
+      </h1>
       <div className="people-center">
         {people.map((person, personIndex) => {
           const { id, image, title, description, name } = person;

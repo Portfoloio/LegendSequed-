@@ -40,3 +40,11 @@ export const SidebarData = [
     cName: "nav-text",
   },
 ];
+export const images1 = [
+  { id: "1 ", imageName: "logo1.png" },
+  { id: "2", imageName: "logo2.png" },
+  { id: "3", imageName: "logo3.png" },
+  { id: "4", imageName: "logo4.png" },
+  { id: "5", imageName: "logo5.png" },
+  { id: "6,", imageName: "logo6.png" },
+];
