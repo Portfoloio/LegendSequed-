@@ -28,9 +28,13 @@ function Testimonial() {
   }, [index]);
 
   return (
-    <section>
-      <h3> Testimonial </h3>
-      <h1> In their own worlds </h1>
+    <section id="Testimonials">
+      <h3 id="h3-test" className="h-test">
+        Testimonial
+      </h3>
+      <h1 id="h1-test" className="h-test">
+        In their own worlds
+      </h1>
       <div className="people-center">
         {people.map((person, personIndex) => {
           const { id, image, title, description, name } = person;

@@ -18,7 +18,7 @@ const TagBtn = ({ name, handleTag, tag }) => {
 
 function Portfolio(props) {
   const [tag, setTag] = useState("all");
-  const [theme, setTheme] = useState("light");
+  // const [theme, setTheme] = useState("light");
   const [filterImages, setFilterImages] = useState([]);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Portfolio(props) {
   return (
     <ThemeProvider theme={props.theme === "light" ? darkTheme : lightTheme}>
       <P.Section>
-        <div id="portfolio--title-tags">
+        <div id="Portfolio">
           <div>
             <h1> Portfolio </h1>
             <P.Tags>

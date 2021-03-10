@@ -20,20 +20,18 @@ article.active {
   transform: translateX(0);
 }
 
-h1,
-h2,
-h3 {
+.h-test {
   text-transform: capitalize;
   letter-spacing: 0.2rem;
   line-height: 1.5;
   margin-bottom: 0.75rem;
 }
-h3 {
+#h3-test {
   color: hsl(209, 34%, 30%);
   font-size: 1rem;
   text-align: center;
 }
-h1 {
+#h1-test {
   color: hsl(209, 61%, 16%);
   font-size: 3rem;
   text-align: center;
