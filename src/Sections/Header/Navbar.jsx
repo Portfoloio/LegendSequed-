@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import ToggleTheme from "../../Components/Buttons/ToggleTheme";
 import { Link } from "react-scroll";
 import "./style.css";
-//sidbar
+//sidebar
 
 import { SidebarData } from "./Data";
 import { IconContext } from "react-icons";
@@ -16,8 +16,6 @@ import { darkTheme, lightTheme } from "../../App";
 
 export function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
-
-  const [showicon] = useState(true);
 
   const [active, setActive] = useState({
     menu: false,
@@ -60,24 +58,9 @@ export function Sidebar() {
                   offset={20}
                 >
                   <span>
-
-                    {/* {showicon === item.title ? (
-
-                    {showicon === item.title ? (
-
-                      <i className="fas fa-check"></i>
-                    ) : (
-                      " "
-                    )} */}
                     {item.title !== activestyle
                       ? item.title
                       : item.title || <i className="fas fa-check"></i>}
-
-
-                    {/* {item.title === "Home" ? item.title : item.title} */}
-
-
-
                   </span>
                 </Link>
               </li>
