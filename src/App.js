@@ -5,6 +5,7 @@ import Experience from "./Sections/Experience";
 import Navbar from "./Sections/Header/Navbar";
 import Welcome from "./Sections/Header/Welcome";
 import Portfolio from "./Sections/Portfolio/index";
+import Skills from "./Sections/Skills";
 import Testimonial from "./Sections/Testimonial/index";
 import Services from "./Sections/WhatWeDo/index";
 
@@ -64,6 +65,7 @@ function App() {
         <Services />
         <Portfolio theme={theme} />
         <Experience />
+        <Skills />
         <Testimonial />
       </ThemeProvider>
     </main>
