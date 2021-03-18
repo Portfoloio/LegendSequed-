@@ -10,7 +10,7 @@ export const Section = styled.section`
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  justify-content: space-around;
+  justify-content: center;
   h6 {
     text-transform: uppercase;
     font-size: 12px;
@@ -44,10 +44,10 @@ export const Section = styled.section`
     opacity: 0.5;
   }
   > div:last-child {
-    width: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 5.5rem;
   }
   button {
     font-weight: 700;

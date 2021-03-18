@@ -21,7 +21,7 @@ export const Section = styled.section`
     z-index: 1;
     padding-top: 4rem;
   }
-  #portfolio--title-tags > div {
+  #Portfolio > div {
     text-align-last: start;
     color: ${({ theme }) => theme.text};
     text-align-last: start;
@@ -31,10 +31,10 @@ export const Section = styled.section`
     justify-content: space-around;
     min-height: 240px;
   }
-  #portfolio--title-tags > div h1 {
+  #Portfolio > div h1 {
     letter-spacing: 0;
   }
-  #portfolio--title-tags > div h1::after {
+  #Portfolio > div h1::after {
     content: "";
     width: 72px;
     height: 3px;
