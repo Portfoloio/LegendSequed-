@@ -75,6 +75,47 @@ export const Section = styled.section`
     grid-column: 1/11;
     grid-row: 4/5;
   }
+  @media screen and (max-width: 1024px) {
+    #skill-parent {
+      grid-template-columns: repeat(10, 2rem);
+      grid-template-rows: repeat(7, 50px);
+    }
+    #skill-container:nth-child(1) {
+      grid-column: 1/9;
+      grid-row: 1/2;
+    }
+    #skill-container:nth-child(2) {
+      grid-column: 1/10;
+      grid-row: 2/3;
+    }
+    #skill-container:nth-child(3) {
+      grid-column: 1/7;
+      grid-row: 3/4;
+    }
+    #skill-container:nth-child(4) {
+      grid-column: 1 / 8;
+      grid-row: 4/5;
+    }
+    #skill-container:nth-child(5) {
+      grid-column: 1/10;
+      grid-row: 5/6;
+    }
+    #skill-container:nth-child(6) {
+      grid-column: 1/7;
+      grid-row: 6/7;
+    }
+    #skill-container:nth-child(7) {
+      grid-column: 1/11;
+      grid-row: 7/8;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    #Skills {
+      margin: 3rem auto;
+      width: 86%;
+    }
+  }
 `;
 export const Skill = styled.div`
   display: flex;
