@@ -111,6 +111,7 @@ export const Section = styled.section`
   }
   @media screen and (max-width: 768px) {
     flex-direction: column-reverse;
+
     #Skills {
       margin: 3rem auto;
       width: 86%;
