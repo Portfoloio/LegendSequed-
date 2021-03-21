@@ -1,112 +1,100 @@
-.services
-{
-    height:90vh;
-    background-image: url("../../images/feature\ bg.png");
-    /* background-size: cover; */
-    
-    background-color:transparent; 
+.services {
+  height: 90vh;
+  background-image: url("../../images/feature\ bg.png");
+  background-color: transparent;
 }
-.info
-{
-    text-align: center;
-    padding-bottom: 30px;
+.info {
+  text-align: center;
+  padding-bottom: 30px;
 }
-.card-1:hover 
-{
-    transform: scale(1.15);
+.card-1 {
+  transition: all 0.5s;
 }
-.info h6 
-{
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-bottom: 12px;
-    font-family: "Manrope", sans-serif;
-    font-weight: 800;
-    color: #666;;
+.card-1:hover {
+  transform: scale(1.15);
+  transition: all 0.5s;
 }
-.info h2 
-{
-    text-transform: capitalize;
-    position: relative;
-    font-size: 36px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.67;
-    letter-spacing: normal;
-    text-align: center;
-    color:#394153;
+.info h6 {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #666;
 }
-.info h2::after
-{
-    content: "";
-    width: 72px;
-    height: 3px;
-    background: #0dd7f7;
-    border-radius: 6px;
-    display: block;
-    margin: 6px auto 36px;
+.info h2 {
+  text-transform: capitalize;
+  position: relative;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #394153;
 }
-.info p 
-{
-    margin: 12px 0 48px 0;
-    color:#666;
-    font-family:"Manrope", sans-serif ;
+.info h2::after {
+  content: "";
+  width: 72px;
+  height: 3px;
+  background: #0dd7f7;
+  border-radius: 6px;
+  display: block;
+  margin: 6px auto 36px;
 }
-.Cards
-{
-    display: flex;
-    margin-left: 100px;
-    justify-content: space-between;
+.info p {
+  margin: 12px 0 48px 0;
+  color: #666;
+  font-family: "Manrope", sans-serif;
 }
-.card 
-{
-    font-size: 32px;
-    margin-right: 12px;
-    line-height: 1;
-    background:#ffffff;
-    box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
-    padding:22px;
-    border-radius: 18px;
+.Cards {
+  display: flex;
+  margin-left: 100px;
+  justify-content: space-between;
 }
- .Title
-{
-    color:#394153;
-    font-family:"Manrope", sans-serif ;
-    transition: .3s;
-    font-weight: 700;
-    margin-bottom: 15px;
-    font-size: 16px;
-    margin-top: 5px;
-  
+.card {
+  font-size: 32px;
+  margin-right: 12px;
+  line-height: 1;
+  background: #ffffff;
+  box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
+  padding: 22px;
+  border-radius: 18px;
 }
-.description
-{
-    color:#666;
-    font: 8px "Manrope", sans-serif ;
-    width:100%;
-    font-size: medium;
-   
+.Title {
+  color: #394153;
+  font-family: "Manrope", sans-serif;
+  transition: 0.3s;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 16px;
+  margin-top: 5px;
 }
-#Learn-more
-{
-    margin-top: 24px;
-    display: block;
-    position: relative;
-    color:#2e3d5f;
-    opacity: 0.6;
+.description {
+  color: #666;
+  font: 8px "Manrope", sans-serif;
+  width: 100%;
+  font-size: medium;
+  max-width: 270px;
+}
+#Learn-more {
+  margin-top: 24px;
+  display: block;
+  position: relative;
+  color: #2e3d5f;
+  opacity: 0.6;
 }
 
-#Learn-more::after
-{
-    content: "";
-    display: inline-block;
-    height: 2px;
-    width: 18px;
-    background-color: #394153;
-    opacity: 0.6;
-    margin-left: 6px;
-    position: relative;
-    top: -3px;
+#Learn-more::after {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  width: 18px;
+  background-color: #394153;
+  opacity: 0.6;
+  margin-left: 6px;
+  position: relative;
+  top: -3px;
 }
