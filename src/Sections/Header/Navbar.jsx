@@ -16,14 +16,11 @@ import { darkTheme, lightTheme } from "../../App";
 
 export function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
-
-  const [showicon] = useState(true);
-
   const [active, setActive] = useState({
     menu: false,
     nav: false,
   });
-
+  const [icon, setShowicon] = useState(false);
   return (
     <IconContext.Provider value={{ color: "#fff", width: "33px" }}>
       <Link to="#" className="menu-bars">
@@ -47,20 +44,29 @@ export function Sidebar() {
       </Link>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
-          {SidebarData.map((item, index, activestyle) => {
+          {SidebarData.map((item, index) => {
             return (
-              <li key={index} className={item.cName}>
+              <li
+                key={index}
+                onClick={(e) => {
+                  setShowicon({ icon: index });
+                }}
+                className={`${index === icon ? "active" : `${item.cName}`}`}
+              >
                 <Link
                   to={item.title}
-                  activestyle={{
-                    color: item.title === "Home" ? "#0dd7f7" : "",
-                  }}
+                  // activestyle={{
+                  //   color: item.title === "Home" ? "#0dd7f7" : "",
+                  // }}
+                  // onClick={(e) => {
+                  //   setShowicon({ icon: index });
+                  // }}
+                  // className={`${index === icon ? "active" : `${item.cName}`}`}
                   spy={true}
                   smooth={true}
                   offset={20}
                 >
                   <span>
-
                     {/* {showicon === item.title ? (
 
                     {showicon === item.title ? (
@@ -69,15 +75,12 @@ export function Sidebar() {
                     ) : (
                       " "
                     )} */}
-                    {item.title !== activestyle
+
+                    {/* {item.title !== activestyle
                       ? item.title
-                      : item.title || <i className="fas fa-check"></i>}
-
-
+                      : item.title || <i className="fas fa-check"></i>} */}
+                    {item.title}
                     {/* {item.title === "Home" ? item.title : item.title} */}
-
-
-
                   </span>
                 </Link>
               </li>

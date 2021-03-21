@@ -103,7 +103,7 @@
 li {
   display: list-item;
 }
-.nav-text a {
+.nav-text  {
   display: block;
   position: relative;
   color: #fff;
@@ -118,9 +118,25 @@ li {
   font-size: 2rem;
 }
 
-.nav-text a:hover {
+/* .nav-text a:hover {
   color: #0dd7f7;
   cursor: pointer;
+} */
+.active
+{
+  color: #0dd7f7;
+  cursor: pointer;
+  opacity: 1;
+display: inline-block;
+  
+}
+
+.active > span::before
+{
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\2713";
+  color: #0dd7f7;
 }
 
 .nav-menu-items {

@@ -7,6 +7,7 @@ import Welcome from "./Sections/Header/Welcome";
 import Portfolio from "./Sections/Portfolio/index";
 import Testimonial from "./Sections/Testimonial/index";
 import Services from "./Sections/WhatWeDo/index";
+// import Skill from "./Sections/Skills/index";
 
 // themes of page
 export const lightTheme = {
@@ -64,6 +65,7 @@ function App() {
         <Services />
         <Portfolio theme={theme} />
         <Experience />
+        {/* <Skill /> */}
         <Testimonial />
       </ThemeProvider>
     </main>
