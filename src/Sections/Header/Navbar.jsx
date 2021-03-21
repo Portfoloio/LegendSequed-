@@ -55,13 +55,7 @@ export function Sidebar() {
               >
                 <Link
                   to={item.title}
-                  // activestyle={{
-                  //   color: item.title === "Home" ? "#0dd7f7" : "",
-                  // }}
-                  // onClick={(e) => {
-                  //   setShowicon({ icon: index });
-                  // }}
-                  // className={`${index === icon ? "active" : `${item.cName}`}`}
+                
                   spy={true}
                   smooth={true}
                   offset={20}
