@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 import { images1 } from "./Data";
-import { Button } from "../../Components/Buttons/Outlined";
-import { H2, H3, P } from "../../Components/Typography";
-import "@lottiefiles/lottie-player";
+// import { Button } from "../../Components/Buttons/Outlined";
+// import { H2, H3, P } from "../../Components/Typography";
+// import "@lottiefiles/lottie-player";
 
 const Data = {
   p1:
@@ -15,16 +15,18 @@ const Data = {
 function Welcome() {
   return (
     <section id="Home">
-      <div className="Hero--info">
-        <H3 className="h3-fullStack">{Data.h3}</H3>
-        <H2 className="name-h2">
-          Hi, My name is <br /> <span> Alaa Hijazi </span>
-        </H2>
-        <P>{Data.p1}</P>
-        <P>{Data.p2}</P>
+      <div id="info">
+        <div className="Hero--info">
+          <h3 className="h3-fullStack">{Data.h3}</h3>
+          <h2 className="name-h2">
+            Hi, My name is <br /> <span> Eman </span>
+          </h2>
+          <p>{Data.p1}</p>
+          <p>{Data.p2}</p>
+        </div>
         <div className="btns">
-          <Button className="fill-btn">My Work</Button>
-          <Button className="primary-btn">let's Talk</Button>
+          <button className="fill-btn">My Work</button>
+          <button className="primary-btn">let's Talk</button>
         </div>
       </div>
 
@@ -38,11 +40,13 @@ function Welcome() {
           className="Lottie-player"
         ></lottie-player>
       </div>
+
       <div className="icons-logo">
-        <H2 className="Expert-h2">Trusted by Experts AT </H2>
+        <h2 className="Expert-h2">Trusted by Experts AT </h2>
         <div className="images">
           {images1.map((image, id) => (
             <img
+              className="img"
               key={id}
               src={`/imgs/${image.imageName}`}
               alt={image.imageName}

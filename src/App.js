@@ -8,7 +8,10 @@ import Portfolio from "./Sections/Portfolio/index";
 import Skills from "./Sections/Skills";
 import Testimonial from "./Sections/Testimonial/index";
 import Services from "./Sections/WhatWeDo/index";
+import Contact from "./Sections/Contact/contact";
 // import Skill from "./Sections/Skills/index";
+require("dotenv").config();
+console.log(process.env);
 
 // themes of page
 export const lightTheme = {
@@ -43,8 +46,9 @@ const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
     width: 100%;
-    font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-family:  'Segoe UI', Helvetica, Arial, sans-serif;
     transition: all 0.25s linear;
+  
   }
   i,li,h1 {
     color: ${({ theme }) => theme.text};
@@ -68,6 +72,7 @@ function App() {
         <Experience />
         <Skills />
         <Testimonial />
+        <Contact />
       </ThemeProvider>
     </main>
   );

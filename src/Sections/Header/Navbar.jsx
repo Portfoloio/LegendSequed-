@@ -53,17 +53,8 @@ export function Sidebar() {
                 }}
                 className={`${index === icon ? "active" : `${item.cName}`}`}
               >
-                <Link
-                  to={item.title}
-                
-                  spy={true}
-                  smooth={true}
-                  offset={20}
-                >
-                  <span>
-                    {item.title }
-                       
-                  </span>
+                <Link to={item.title} spy={true} smooth={true} offset={20}>
+                  <span>{item.title}</span>
                 </Link>
               </li>
             );
@@ -79,7 +70,7 @@ const Navbar = (props) => {
   const [scroll, setScroll] = useState(false);
 
   const scrollChangeNav = () => {
-    window.scrollY >= 80 ? setScroll(true) : setScroll(false);
+    window.scrollY >= 70 ? setScroll(true) : setScroll(false);
   };
   window.addEventListener("scroll", scrollChangeNav);
 
@@ -98,13 +89,19 @@ const Navbar = (props) => {
               Eman@domain.com
             </li>
           </ul>
+          <Router>
+            <div id="navbar--toggle-sidebar">
+              <ToggleTheme theme={props.theme} setTheme={props.setTheme} />
+              <Sidebar />
+            </div>
+          </Router>
         </div>
-        <Router>
+        {/* <Router>
           <div id="navbar--toggle-sidebar">
             <ToggleTheme theme={props.theme} setTheme={props.setTheme} />
             <Sidebar />
           </div>
-        </Router>
+        </Router> */}
       </nav>
     </ThemeProvider>
   );

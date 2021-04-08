@@ -41,10 +41,10 @@ export const SidebarData = [
   },
 ];
 export const images1 = [
-  { id: "1 ", imageName: "logo1.png" },
-  { id: "2", imageName: "logo2.png" },
-  { id: "3", imageName: "logo3.png" },
-  { id: "4", imageName: "logo4.png" },
-  { id: "5", imageName: "logo5.png" },
-  { id: "6,", imageName: "logo6.png" },
+  { id: "1 ", imageName: "im1.svg" },
+  { id: "2", imageName: "im2.svg" },
+  { id: "3", imageName: "im3.svg" },
+  { id: "4", imageName: "im4.svg" },
+  { id: "5", imageName: "im5.svg" },
+  { id: "6,", imageName: "im1.svg" },
 ];
