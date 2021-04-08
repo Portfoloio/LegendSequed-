@@ -12,7 +12,7 @@ article.next {
   transform: translateX(100%);
 }
 article.prev {
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 article.active {
   opacity: 1;

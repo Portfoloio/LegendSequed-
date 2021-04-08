@@ -16,12 +16,11 @@ import { darkTheme, lightTheme } from "../../App";
 
 export function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
-
   const [active, setActive] = useState({
     menu: false,
     nav: false,
   });
-
+  const [icon, setShowicon] = useState(false);
   return (
     <IconContext.Provider value={{ color: "#fff", width: "33px" }}>
       <Link to="#" className="menu-bars">
@@ -45,23 +44,17 @@ export function Sidebar() {
       </Link>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
-          {SidebarData.map((item, index, activestyle) => {
+          {SidebarData.map((item, index) => {
             return (
-              <li key={index} className={item.cName}>
-                <Link
-                  to={item.title}
-                  activestyle={{
-                    color: item.title === "Home" ? "#0dd7f7" : "",
-                  }}
-                  spy={true}
-                  smooth={true}
-                  offset={20}
-                >
-                  <span>
-                    {item.title !== activestyle
-                      ? item.title
-                      : item.title || <i className="fas fa-check"></i>}
-                  </span>
+              <li
+                key={index}
+                onClick={(e) => {
+                  setShowicon({ icon: index });
+                }}
+                className={`${index === icon ? "active" : `${item.cName}`}`}
+              >
+                <Link to={item.title} spy={true} smooth={true} offset={20}>
+                  <span>{item.title}</span>
                 </Link>
               </li>
             );
@@ -77,7 +70,7 @@ const Navbar = (props) => {
   const [scroll, setScroll] = useState(false);
 
   const scrollChangeNav = () => {
-    window.scrollY >= 80 ? setScroll(true) : setScroll(false);
+    window.scrollY >= 70 ? setScroll(true) : setScroll(false);
   };
   window.addEventListener("scroll", scrollChangeNav);
 
@@ -96,13 +89,19 @@ const Navbar = (props) => {
               Eman@domain.com
             </li>
           </ul>
+          <Router>
+            <div id="navbar--toggle-sidebar">
+              <ToggleTheme theme={props.theme} setTheme={props.setTheme} />
+              <Sidebar />
+            </div>
+          </Router>
         </div>
-        <Router>
+        {/* <Router>
           <div id="navbar--toggle-sidebar">
             <ToggleTheme theme={props.theme} setTheme={props.setTheme} />
             <Sidebar />
           </div>
-        </Router>
+        </Router> */}
       </nav>
     </ThemeProvider>
   );
